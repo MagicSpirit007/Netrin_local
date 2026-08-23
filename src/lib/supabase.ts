@@ -1,0 +1,14 @@
+import { createClient, type SupabaseClient } from '@supabase/supabase-js'
+
+const url = import.meta.env.VITE_SUPABASE_URL
+const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+
+/** 两个 env 都填了才算配置完成（codex/CI 无 .env.local 时为 false）。 */
+export const isSupabaseConfigured = Boolean(url && anonKey)
+
+/** 未配置时为 null；所有调用方必须先判空。 */
+export const supabase: SupabaseClient | null = isSupabaseConfigured
+  ? createClient(url as string, anonKey as string, {
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false }
+    })
+  : null

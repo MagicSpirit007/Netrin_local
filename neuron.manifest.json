@@ -1,0 +1,49 @@
+{
+  "id": "netrin-cell",
+  "name": "Netrin",
+  "description": "A mobile-first PWA that guides visitors along tree- and flower-watching routes across the Donghu campus of Zhejiang A&F University, with geolocated field notes and a route workshop. Like the netrin proteins that steer growing axons toward their targets, this cell steers people along nature-observation routes to each point of interest.",
+  "platform": {
+    "primarySurface": "mobile-web",
+    "packaging": ["web"]
+  },
+  "kernel": {
+    "inheritsPlugins": "neuron-nucleus-library"
+  },
+  "home": {
+    "layout": "map-canvas",
+    "feedDensity": "medium",
+    "primaryCard": "trail-card"
+  },
+  "contentTypes": [
+    {
+      "id": "trail-route",
+      "name": "Trail Route",
+      "fields": ["title", "description", "cover", "theme", "waypoints", "stops", "distance", "duration", "season", "difficulty", "author", "tags"]
+    },
+    {
+      "id": "trail-stop",
+      "name": "Trail Stop",
+      "fields": ["title", "description", "location", "media", "species", "audio", "order", "tags"]
+    },
+    {
+      "id": "field-note",
+      "name": "Field Note",
+      "fields": ["body", "photos", "location", "routeRef", "stopRef", "species", "createdAt", "author"]
+    },
+    {
+      "id": "species-card",
+      "name": "Species Card",
+      "fields": ["commonName", "scientificName", "family", "description", "photos", "bloomSeason", "tags"]
+    }
+  ],
+  "plugins": {
+    "rating": "trail-rating-receptor",
+    "ranking": "nearby-trail-synapse",
+    "theme": "field-guide-phenotype",
+    "moderation": "community-report-cortex"
+  },
+  "navigation": {
+    "type": "bottom-tabs",
+    "items": ["home", "discover", "create", "profile"]
+  }
+}

@@ -1,0 +1,12 @@
+node_modules
+dist
+dev-dist
+*.local
+SERVER.md
+rubbish/
+.DS_Store
+.release-audit/
+.release-candidate/
+*.log
+deploy/
+OpenSourceProjects/
