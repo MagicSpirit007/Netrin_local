@@ -1,5 +1,7 @@
 # Netrin_local
 
+**简体中文** | [English](README.en.md)
+
 Netrin_local 是 Netrin 的本地优先版本：一款面向校园自然观察路线的移动端 PWA。地图、路线与字体可以随应用离线使用；路线草稿和下载内容默认保存在浏览器本地。Supabase 只是一项可选同步能力。
 
 本仓库不接入高德 SDK 或高德 API，也不依赖在线地图服务完成核心导览。
