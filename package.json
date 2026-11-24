@@ -37,7 +37,7 @@
     "@turf/distance": "7.4.0",
     "@turf/helpers": "7.4.0",
     "@turf/nearest-point-on-line": "7.4.0",
-    "i18next": "^23.15.2",
+    "i18next": "^27.2.6",
     "localforage": "^1.10.0",
     "lxgw-wenkai-screen-webfont": "1.7.0",
     "maplibre-gl": "^4.7.1",
